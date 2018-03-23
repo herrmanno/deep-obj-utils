@@ -1,0 +1,21 @@
+{
+  "name": "deep-obj-utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "ava 'lib/test/**/*.js'",
+    "prepublish": "npm run test && npm run doc && cp lib/src/* .",
+    "postpublish": "rm -f ./*.{js,js.map,d.ts}",
+    "doc": "typedoc --out docs/api --mode file --excludePrivate src"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ava": "^0.25.0"
+  },
+  "devDependencies": {
+    "typedoc": "^0.11.1"
+  }
+}
