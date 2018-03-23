@@ -16,6 +16,6 @@ TODO: Description of what the library is for and when (not) to use it.
 
 ## Api
 
-See API documentation at [docs/api](docs/api/index.html).
+The documentation can be found at [herrmanno.github.io/deep-obj-utils/api/](https://herrmanno.github.io/deep-obj-utils/api/).
 
 This project is licensed under the [ISC license](LICENSE).
