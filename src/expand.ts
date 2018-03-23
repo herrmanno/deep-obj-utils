@@ -74,6 +74,14 @@ export default function expand(
   }
 }
 
+/**
+ * Checks if an pattern segment matches a path segment
+ * @param patternSegment the pattern segment
+ * @param key the path segment to test against
+ *
+ * @private
+ * @hidden
+ */
 function matches(patternSegment: Segment, key: string | number) {
   if (patternSegment instanceof RegExp) {
     return patternSegment.test(String(key))
