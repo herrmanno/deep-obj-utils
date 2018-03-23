@@ -1,21 +1,31 @@
 {
   "name": "deep-obj-utils",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.0.0-rc.1",
+  "description": "Utilities to handle immutable objects without pain",
+  "main": "",
   "scripts": {
+    "build": "tsc",
     "test": "ava 'lib/test/**/*.js'",
-    "prepublish": "npm run test && npm run doc && cp lib/src/* .",
+    "prepublish": "npm run build && npm run test && npm run doc && cp lib/src/* .",
     "postpublish": "rm -f ./*.{js,js.map,d.ts}",
     "doc": "typedoc --out docs/api --mode file --excludePrivate src"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "getter",
+    "setter",
+    "deep",
+    "immutable",
+    "util",
+    "utility",
+    "utilities"
+  ],
+  "homepage": "https://github.com/herrmanno/deep-obj-utils",
+  "author": "https://github.com/herrmanno",
   "license": "ISC",
   "dependencies": {
-    "ava": "^0.25.0"
   },
   "devDependencies": {
-    "typedoc": "^0.11.1"
+    "ava": "0.25.0",
+    "typedoc": "0.11.1"
   }
 }
