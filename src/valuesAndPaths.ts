@@ -25,6 +25,9 @@ export default function valuesAndPaths(
   return _valuesAndPaths(object, [])
 }
 
+/**
+ * @hidden
+ */
 function _valuesAndPaths(
   object: object | any[],
   prefix: Segment[]

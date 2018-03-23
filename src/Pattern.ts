@@ -7,6 +7,7 @@ import Path from "./Path"
 /**
  * Encapsulates the {@link get} and {@link expand} function in an object oriented manner
  * @private
+ * @hidden
  */
 export default class Pattern {
   readonly pattern: RawPattern
