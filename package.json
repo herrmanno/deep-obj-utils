@@ -10,6 +10,10 @@
     "postpublish": "rm -f ./*.{js,js.map,d.ts}",
     "doc": "typedoc --out docs/api --mode file --excludePrivate src"
   },
+  "pre-commit": [
+    "build",
+    "test"
+  ],  
   "keywords": [
     "getter",
     "setter",
@@ -22,10 +26,10 @@
   "homepage": "https://github.com/herrmanno/deep-obj-utils",
   "author": "https://github.com/herrmanno",
   "license": "ISC",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "ava": "0.25.0",
+    "pre-commit": "1.2.2",
     "typedoc": "0.11.1"
   }
 }
