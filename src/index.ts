@@ -1,8 +1,8 @@
 import expand from "./expand"
 import get from "./get"
 import set from "./set"
-import { PathSegment, Path } from "./Path"
-import { PatternSegment, Pattern } from "./Pattern"
+import { PathSegment, Path, isPath } from "./Path"
+import { PatternSegment, Pattern, isPattern } from "./Pattern"
 import update from "./update"
 import values from "./values"
 import valuesAndPaths from "./valuesAndPaths"
@@ -13,7 +13,9 @@ export default {
   set,
   update,
   values,
-  valuesAndPaths
+  valuesAndPaths,
+  isPath,
+  isPattern
 }
 
 export {
@@ -25,6 +27,8 @@ export {
   valuesAndPaths,
   Path,
   PathSegment,
+  isPath,
   Pattern,
-  PatternSegment
+  PatternSegment,
+  isPattern
 }
