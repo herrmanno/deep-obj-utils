@@ -1,4 +1,4 @@
-import { RawPath } from "./RawPath"
+import { Path } from "./Path"
 
 /**
  * Retrieves a value in an object described by an path
@@ -12,8 +12,8 @@ import { RawPath } from "./RawPath"
  * // result === "BAR"
  * ```
  */
-export default function get<T>(path: RawPath, obj: T): any {
-  const pathArr: RawPath = new Array<any>().concat(path)
+function get<T>(path: Path, obj: T): any {
+  const pathArr: Path = new Array<any>().concat(path)
   return pathArr.reduce((o: any, segment) => {
     if (null !== o && undefined !== o) {
       return o[segment]
@@ -22,3 +22,6 @@ export default function get<T>(path: RawPath, obj: T): any {
     }
   }, obj)
 }
+
+export default get
+export { get }

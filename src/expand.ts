@@ -1,5 +1,5 @@
-import { RawPattern, Segment } from "./RawPattern"
-import { RawPath } from "./RawPath"
+import { Pattern, PatternSegment } from "./Pattern"
+import { Path } from "./Path"
 
 /**
  * Expands a pattern to all matching conrete paths over an object
@@ -26,40 +26,64 @@ import { RawPath } from "./RawPath"
  * // result ===  [ ["foo", "bar"], ["foo", "baz"] ]
  * ```
  */
-// TODO: support "**" path segment
-export default function expand(
-  pattern: RawPattern,
-  object: object | any[]
-): RawPath[] {
-  const patternArr: RawPattern = new Array<Segment>().concat(pattern)
-  const [segment] = patternArr
+function expand(pattern: Pattern, object: object | any[]): Path[] {
+  const patternArr: Pattern = new Array<Segment>().concat(pattern)
+  const [segment, nextSegment] = patternArr
 
-  // primitive type does return theirself, if the match the current segment
+  // primitive type does return no mathing paths
   if (null === object || typeof object !== "object") {
     return [] // matches(segment, object) ? [object] : []
   } else {
     if (patternArr.length > 1) {
+      const nextPatternArr = patternArr.slice(1)
       // find all subobject that matches segment
       // and return all results of expand(patternArr.slice(1), subObj).flatMap().map(path => [segment, ...path])
+      // if segment is "**" return all those results and also thoose, expand the existing pattern (w/ leading '**') over subObj
       if (object instanceof Array) {
         return object
           .filter((_, i) => matches(segment, i))
-          .map((element, i) =>
-            expand(patternArr.slice(1), element).map(path => [
-              i,
-              ...new Array<any>().concat(path)
-            ])
-          )
+          .map((element, i) => {
+            if (segment === "**") {
+              return [
+                ...expand(patternArr, element).map(path => [
+                  i,
+                  ...new Array<any>().concat(path)
+                ]),
+                ...expand(nextPatternArr, element).map(path => [
+                  i,
+                  ...new Array<any>().concat(path)
+                ])
+              ]
+            } else {
+              return expand(nextPatternArr, element).map(path => [
+                i,
+                ...new Array<any>().concat(path)
+              ])
+            }
+          })
           .reduce((a, b) => [...a, ...b], [])
       } else {
         return Object.keys(object)
           .filter(k => matches(segment, k))
-          .map((key: string) =>
-            expand(patternArr.slice(1), (<any>object)[key]).map(path => [
-              key,
-              ...new Array<any>().concat(path)
-            ])
-          )
+          .map((key: string) => {
+            if (segment === "**") {
+              return [
+                ...expand(patternArr, (<any>object)[key]).map(path => [
+                  key,
+                  ...new Array<any>().concat(path)
+                ]),
+                ...expand(nextPatternArr, (<any>object)[key]).map(path => [
+                  key,
+                  ...new Array<any>().concat(path)
+                ])
+              ]
+            } else {
+              return expand(nextPatternArr, (<any>object)[key]).map(path => [
+                key,
+                ...new Array<any>().concat(path)
+              ])
+            }
+          })
           .reduce((a, b) => [...a, ...b], [])
       }
     } else {
@@ -82,12 +106,17 @@ export default function expand(
  * @private
  * @hidden
  */
-function matches(patternSegment: Segment, key: string | number) {
+function matches(patternSegment: PatternSegment, key: string | number) {
   if (patternSegment instanceof RegExp) {
     return patternSegment.test(String(key))
+  } else if (patternSegment === "**") {
+    return true
   } else if (patternSegment === "*") {
     return true
   } else {
     return patternSegment === key
   }
 }
+
+export default expand
+export { expand }

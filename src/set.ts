@@ -1,4 +1,4 @@
-import { RawPath } from "./RawPath"
+import { Path } from "./Path"
 
 /**
  * Creates an object that is similiar to a given object but differs at a specific path
@@ -25,9 +25,8 @@ import { RawPath } from "./RawPath"
  * // if `typeof segment === "number"`  an empty array will be created at the non-existing path
  * ```
  */
-// TODO: make autovivication configurable
-export default function set<T>(path: RawPath, obj: T, value: any): T {
-  const pathArr: RawPath = new Array<any>().concat(path)
+function set<T>(path: Path, obj: T, value: any): T {
+  const pathArr: Path = new Array<any>().concat(path)
   if (pathArr.length === 0) {
     return value
   } else {
@@ -51,3 +50,6 @@ export default function set<T>(path: RawPath, obj: T, value: any): T {
     }
   }
 }
+
+export default set
+export { set }

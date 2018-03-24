@@ -1,6 +1,6 @@
 import set from "./set"
 import get from "./get"
-import { RawPath } from "./RawPath"
+import { Path } from "./Path"
 
 /**
  * Creates an object that is similiar to a given object but differs at a specific path
@@ -26,10 +26,9 @@ import { RawPath } from "./RawPath"
  * // if `typeof segment === "number"`  an empty array will be created at the non-existing path
  * ```
  */
-export default function update<T>(
-  path: RawPath,
-  obj: T,
-  updater: (o: any) => any
-): T {
+function update<T>(path: Path, obj: T, updater: (o: any) => any): T {
   return set(path, obj, updater(get(path, obj)))
 }
+
+export default update
+export { update }

@@ -1,4 +1,4 @@
-import { RawPath, Segment } from "./RawPath"
+import { Path, PathSegment } from "./Path"
 
 /**
  * Retrieves all primitive value and their corresponding paths from an object
@@ -19,19 +19,20 @@ import { RawPath, Segment } from "./RawPath"
  * ]
  * ```
  */
-export default function valuesAndPaths(
+function valuesAndPaths(
   object: object | any[]
-): Array<{ path: RawPath; value: any }> {
+): Array<{ path: Path; value: any }> {
   return _valuesAndPaths(object, [])
 }
 
 /**
+ * @private
  * @hidden
  */
 function _valuesAndPaths(
   object: object | any[],
-  prefix: Segment[]
-): Array<{ path: RawPath; value: any }> {
+  prefix: PathSegment[]
+): Array<{ path: Path; value: any }> {
   if (null === object || typeof object !== "object") {
     return [{ path: prefix, value: object }]
   } else {
@@ -48,3 +49,6 @@ function _valuesAndPaths(
     }
   }
 }
+
+export default valuesAndPaths
+export { valuesAndPaths }

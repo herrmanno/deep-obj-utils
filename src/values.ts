@@ -1,4 +1,4 @@
-import { RawPath, Segment } from "./RawPath"
+import { Path, PathSegment } from "./Path"
 import valuesAndPaths from "./valuesAndPaths"
 
 /**
@@ -16,6 +16,9 @@ import valuesAndPaths from "./valuesAndPaths"
  * // result === [ "bar", true, 0 ]
  * ```
  */
-export default function values(object: object | any[]): Array<any> {
+function values(object: object | any[]): Array<any> {
   return valuesAndPaths(object).map(o => o.value)
 }
+
+export default values
+export { values }
