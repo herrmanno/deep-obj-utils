@@ -67,12 +67,13 @@
 				<h2>Index</h2>
 				<section class="tsd-panel tsd-index-panel">
 					<div class="tsd-index-content">
-						<section class="tsd-index-section ">
+						<section class="tsd-index-section tsd-is-not-exported">
 							<h3>Type aliases</h3>
 							<ul class="tsd-index-list">
-								<li class="tsd-kind-type-alias"><a href="globals.html#rawpath" class="tsd-kind-icon">Raw<wbr>Path</a></li>
-								<li class="tsd-kind-type-alias"><a href="globals.html#rawpattern" class="tsd-kind-icon">Raw<wbr>Pattern</a></li>
-								<li class="tsd-kind-type-alias"><a href="globals.html#segment" class="tsd-kind-icon">Segment</a></li>
+								<li class="tsd-kind-type-alias tsd-is-not-exported"><a href="globals.html#path" class="tsd-kind-icon">Path</a></li>
+								<li class="tsd-kind-type-alias tsd-is-not-exported"><a href="globals.html#pathsegment" class="tsd-kind-icon">Path<wbr>Segment</a></li>
+								<li class="tsd-kind-type-alias tsd-is-not-exported"><a href="globals.html#pattern" class="tsd-kind-icon">Pattern</a></li>
+								<li class="tsd-kind-type-alias tsd-is-not-exported"><a href="globals.html#patternsegment" class="tsd-kind-icon">Pattern<wbr>Segment</a></li>
 							</ul>
 						</section>
 						<section class="tsd-index-section ">
@@ -80,6 +81,9 @@
 							<ul class="tsd-index-list">
 								<li class="tsd-kind-function"><a href="globals.html#expand" class="tsd-kind-icon">expand</a></li>
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#get" class="tsd-kind-icon">get</a></li>
+								<li class="tsd-kind-function tsd-is-not-exported"><a href="globals.html#hasnumberlikestrings" class="tsd-kind-icon">has<wbr>Numberlike<wbr>Strings</a></li>
+								<li class="tsd-kind-function tsd-is-not-exported"><a href="globals.html#ispath" class="tsd-kind-icon">is<wbr>Path</a></li>
+								<li class="tsd-kind-function tsd-is-not-exported"><a href="globals.html#ispattern" class="tsd-kind-icon">is<wbr>Pattern</a></li>
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#set" class="tsd-kind-icon">set</a></li>
 								<li class="tsd-kind-function tsd-has-type-parameter"><a href="globals.html#update" class="tsd-kind-icon">update</a></li>
 								<li class="tsd-kind-function"><a href="globals.html#values" class="tsd-kind-icon">values</a></li>
@@ -89,15 +93,15 @@
 					</div>
 				</section>
 			</section>
-			<section class="tsd-panel-group tsd-member-group ">
+			<section class="tsd-panel-group tsd-member-group tsd-is-not-exported">
 				<h2>Type aliases</h2>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias">
-					<a name="rawpath" class="tsd-anchor"></a>
-					<h3>Raw<wbr>Path</h3>
-					<div class="tsd-signature tsd-kind-icon">Raw<wbr>Path<span class="tsd-signature-symbol">:</span> <a href="globals.html#segment" class="tsd-signature-type">Segment</a><span class="tsd-signature-symbol"> | </span><a href="globals.html#segment" class="tsd-signature-type">Segment</a><span class="tsd-signature-symbol">[]</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-is-not-exported">
+					<a name="path" class="tsd-anchor"></a>
+					<h3>Path</h3>
+					<div class="tsd-signature tsd-kind-icon">Path<span class="tsd-signature-symbol">:</span> <a href="globals.html#pathsegment" class="tsd-signature-type">PathSegment</a><span class="tsd-signature-symbol"> | </span><a href="globals.html#pathsegment" class="tsd-signature-type">PathSegment</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/2f6c40c/src/RawPath.ts#L9">RawPath.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/d69eb7f/src/Path.ts#L11">Path.ts:11</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -106,13 +110,28 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias">
-					<a name="rawpattern" class="tsd-anchor"></a>
-					<h3>Raw<wbr>Pattern</h3>
-					<div class="tsd-signature tsd-kind-icon">Raw<wbr>Pattern<span class="tsd-signature-symbol">:</span> <a href="globals.html#segment" class="tsd-signature-type">Segment</a><span class="tsd-signature-symbol"> | </span><a href="globals.html#segment" class="tsd-signature-type">Segment</a><span class="tsd-signature-symbol">[]</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-is-not-exported">
+					<a name="pathsegment" class="tsd-anchor"></a>
+					<h3>Path<wbr>Segment</h3>
+					<div class="tsd-signature tsd-kind-icon">Path<wbr>Segment<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/2f6c40c/src/RawPattern.ts#L9">RawPattern.ts:9</a></li>
+							<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/d69eb7f/src/Path.ts#L6">Path.ts:6</a></li>
+						</ul>
+					</aside>
+					<div class="tsd-comment tsd-typography">
+						<div class="lead">
+							<p>A segment describing an key or index in an object or array</p>
+						</div>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-is-not-exported">
+					<a name="pattern" class="tsd-anchor"></a>
+					<h3>Pattern</h3>
+					<div class="tsd-signature tsd-kind-icon">Pattern<span class="tsd-signature-symbol">:</span> <a href="globals.html#patternsegment" class="tsd-signature-type">PatternSegment</a><span class="tsd-signature-symbol"> | </span><a href="globals.html#patternsegment" class="tsd-signature-type">PatternSegment</a><span class="tsd-signature-symbol">[]</span></div>
+					<aside class="tsd-sources">
+						<ul>
+							<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/d69eb7f/src/Pattern.ts#L9">Pattern.ts:9</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -121,20 +140,18 @@
 						</div>
 					</div>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-type-alias">
-					<a name="segment" class="tsd-anchor"></a>
-					<h3>Segment</h3>
-					<div class="tsd-signature tsd-kind-icon">Segment<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">RegExp</span></div>
+				<section class="tsd-panel tsd-member tsd-kind-type-alias tsd-is-not-exported">
+					<a name="patternsegment" class="tsd-anchor"></a>
+					<h3>Pattern<wbr>Segment</h3>
+					<div class="tsd-signature tsd-kind-icon">Pattern<wbr>Segment<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">RegExp</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/2f6c40c/src/RawPath.ts#L4">RawPath.ts:4</a></li>
-							<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/2f6c40c/src/RawPattern.ts#L4">RawPattern.ts:4</a></li>
+							<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/d69eb7f/src/Pattern.ts#L4">Pattern.ts:4</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
 						<div class="lead">
-							<p>A segment describing an key or index in an object or array
-							A segment describing an key, index, matcher or wildcard in an object or array</p>
+							<p>A segment describing an key, index, matcher or wildcard in an object or array</p>
 						</div>
 					</div>
 				</section>
@@ -145,13 +162,13 @@
 					<a name="expand" class="tsd-anchor"></a>
 					<h3>expand</h3>
 					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">expand<span class="tsd-signature-symbol">(</span>pattern<span class="tsd-signature-symbol">: </span><a href="globals.html#rawpattern" class="tsd-signature-type">RawPattern</a>, object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="globals.html#rawpath" class="tsd-signature-type">RawPath</a><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">expand<span class="tsd-signature-symbol">(</span>pattern<span class="tsd-signature-symbol">: </span><a href="globals.html#pattern" class="tsd-signature-type">Pattern</a>, object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="globals.html#path" class="tsd-signature-type">Path</a><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/2f6c40c/src/expand.ts#L30">expand.ts:30</a></li>
+									<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/d69eb7f/src/expand.ts#L29">expand.ts:29</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -183,7 +200,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>pattern: <a href="globals.html#rawpattern" class="tsd-signature-type">RawPattern</a></h5>
+									<h5>pattern: <a href="globals.html#pattern" class="tsd-signature-type">Pattern</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>the pattern to expand</p>
 									</div>
@@ -195,7 +212,7 @@
 									</div>
 								</li>
 							</ul>
-							<h4 class="tsd-returns-title">Returns <a href="globals.html#rawpath" class="tsd-signature-type">RawPath</a><span class="tsd-signature-symbol">[]</span></h4>
+							<h4 class="tsd-returns-title">Returns <a href="globals.html#path" class="tsd-signature-type">Path</a><span class="tsd-signature-symbol">[]</span></h4>
 						</li>
 					</ul>
 				</section>
@@ -203,13 +220,13 @@
 					<a name="get" class="tsd-anchor"></a>
 					<h3>get</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">get&lt;T&gt;<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><a href="globals.html#rawpath" class="tsd-signature-type">RawPath</a>, obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+						<li class="tsd-signature tsd-kind-icon">get&lt;T&gt;<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><a href="globals.html#path" class="tsd-signature-type">Path</a>, obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/2f6c40c/src/get.ts#L15">get.ts:15</a></li>
+									<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/d69eb7f/src/get.ts#L15">get.ts:15</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -234,7 +251,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>path: <a href="globals.html#rawpath" class="tsd-signature-type">RawPath</a></h5>
+									<h5>path: <a href="globals.html#path" class="tsd-signature-type">Path</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>the path at which the objects value should be retrieved</p>
 									</div>
@@ -250,17 +267,113 @@
 						</li>
 					</ul>
 				</section>
-				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
-					<a name="set" class="tsd-anchor"></a>
-					<h3>set</h3>
-					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">set&lt;T&gt;<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><a href="globals.html#rawpath" class="tsd-signature-type">RawPath</a>, obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-is-not-exported">
+					<a name="hasnumberlikestrings" class="tsd-anchor"></a>
+					<h3>has<wbr>Numberlike<wbr>Strings</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">has<wbr>Numberlike<wbr>Strings<span class="tsd-signature-symbol">(</span>p<span class="tsd-signature-symbol">: </span><a href="globals.html#path" class="tsd-signature-type">Path</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/2f6c40c/src/set.ts#L29">set.ts:29</a></li>
+									<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/d69eb7f/src/Path.ts#L36">Path.ts:36</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks if an path contains number-like strings</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>p: <a href="globals.html#path" class="tsd-signature-type">Path</a></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the path to check</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>true, if {@code p} contains a number-like string</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-is-not-exported">
+					<a name="ispath" class="tsd-anchor"></a>
+					<h3>is<wbr>Path</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Path<span class="tsd-signature-symbol">(</span>p<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/d69eb7f/src/Path.ts#L18">Path.ts:18</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks if an object is a valid path</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>p: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the object to check</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>true if {@code p} is a valid path</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-is-not-exported">
+					<a name="ispattern" class="tsd-anchor"></a>
+					<h3>is<wbr>Pattern</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-is-not-exported">
+						<li class="tsd-signature tsd-kind-icon">is<wbr>Pattern<span class="tsd-signature-symbol">(</span>p<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/d69eb7f/src/Pattern.ts#L16">Pattern.ts:16</a></li>
+								</ul>
+							</aside>
+							<div class="tsd-comment tsd-typography">
+								<div class="lead">
+									<p>Checks if an object is a valid pattern</p>
+								</div>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>p: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography">
+										<p>the object to check</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+							<p>true if {@code p} is a valid pattern</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-function tsd-has-type-parameter">
+					<a name="set" class="tsd-anchor"></a>
+					<h3>set</h3>
+					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
+						<li class="tsd-signature tsd-kind-icon">set&lt;T&gt;<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><a href="globals.html#path" class="tsd-signature-type">Path</a>, obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, value<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<ul>
+									<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/d69eb7f/src/set.ts#L28">set.ts:28</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -296,7 +409,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>path: <a href="globals.html#rawpath" class="tsd-signature-type">RawPath</a></h5>
+									<h5>path: <a href="globals.html#path" class="tsd-signature-type">Path</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>the path at which the the created object shall be different</p>
 									</div>
@@ -322,13 +435,13 @@
 					<a name="update" class="tsd-anchor"></a>
 					<h3>update</h3>
 					<ul class="tsd-signatures tsd-kind-function tsd-has-type-parameter">
-						<li class="tsd-signature tsd-kind-icon">update&lt;T&gt;<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><a href="globals.html#rawpath" class="tsd-signature-type">RawPath</a>, obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, updater<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
+						<li class="tsd-signature tsd-kind-icon">update&lt;T&gt;<span class="tsd-signature-symbol">(</span>path<span class="tsd-signature-symbol">: </span><a href="globals.html#path" class="tsd-signature-type">Path</a>, obj<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span>, updater<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">T</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/2f6c40c/src/update.ts#L29">update.ts:29</a></li>
+									<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/d69eb7f/src/update.ts#L29">update.ts:29</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -363,7 +476,7 @@
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>path: <a href="globals.html#rawpath" class="tsd-signature-type">RawPath</a></h5>
+									<h5>path: <a href="globals.html#path" class="tsd-signature-type">Path</a></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>the path at which the the created object shall be different</p>
 									</div>
@@ -381,7 +494,7 @@
 									</div>
 									<ul class="tsd-parameters">
 										<li class="tsd-parameter-siganture">
-											<ul class="tsd-signatures tsd-kind-type-literal tsd-is-not-exported">
+											<ul class="tsd-signatures tsd-kind-type-literal">
 												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>o<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
 											</ul>
 											<ul class="tsd-descriptions">
@@ -413,7 +526,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/2f6c40c/src/values.ts#L19">values.ts:19</a></li>
+									<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/d69eb7f/src/values.ts#L19">values.ts:19</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -454,7 +567,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/2f6c40c/src/valuesAndPaths.ts#L22">valuesAndPaths.ts:22</a></li>
+									<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/d69eb7f/src/valuesAndPaths.ts#L22">valuesAndPaths.ts:22</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -501,20 +614,32 @@
 			</nav>
 			<nav class="tsd-navigation secondary menu-sticky">
 				<ul class="before-current">
-					<li class=" tsd-kind-type-alias">
-						<a href="globals.html#rawpath" class="tsd-kind-icon">Raw<wbr>Path</a>
+					<li class=" tsd-kind-type-alias tsd-is-not-exported">
+						<a href="globals.html#path" class="tsd-kind-icon">Path</a>
 					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="globals.html#rawpattern" class="tsd-kind-icon">Raw<wbr>Pattern</a>
+					<li class=" tsd-kind-type-alias tsd-is-not-exported">
+						<a href="globals.html#pathsegment" class="tsd-kind-icon">Path<wbr>Segment</a>
 					</li>
-					<li class=" tsd-kind-type-alias">
-						<a href="globals.html#segment" class="tsd-kind-icon">Segment</a>
+					<li class=" tsd-kind-type-alias tsd-is-not-exported">
+						<a href="globals.html#pattern" class="tsd-kind-icon">Pattern</a>
+					</li>
+					<li class=" tsd-kind-type-alias tsd-is-not-exported">
+						<a href="globals.html#patternsegment" class="tsd-kind-icon">Pattern<wbr>Segment</a>
 					</li>
 					<li class=" tsd-kind-function">
 						<a href="globals.html#expand" class="tsd-kind-icon">expand</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="globals.html#get" class="tsd-kind-icon">get</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="globals.html#hasnumberlikestrings" class="tsd-kind-icon">has<wbr>Numberlike<wbr>Strings</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="globals.html#ispath" class="tsd-kind-icon">is<wbr>Path</a>
+					</li>
+					<li class=" tsd-kind-function tsd-is-not-exported">
+						<a href="globals.html#ispattern" class="tsd-kind-icon">is<wbr>Pattern</a>
 					</li>
 					<li class=" tsd-kind-function tsd-has-type-parameter">
 						<a href="globals.html#set" class="tsd-kind-icon">set</a>

@@ -8,4 +8,15 @@ type PatternSegment = string | number | RegExp
  */
 type Pattern = PatternSegment | PatternSegment[]
 
-export { PatternSegment, Pattern }
+/**
+ * Checks if an object is a valid pattern
+ * @param p the object to check
+ * @returns true if {@code p} is a valid pattern
+ */
+function isPattern(p: any): p is Pattern {
+  return new Array<PatternSegment>().concat(p).every(s => {
+    return typeof s === "string" || typeof s === "number" || s instanceof RegExp
+  })
+}
+
+export { PatternSegment, Pattern, isPattern }

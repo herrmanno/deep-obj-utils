@@ -1,4 +1,4 @@
-import { Path } from "./Path"
+import { Path, isPath } from "./Path"
 
 /**
  * Creates an object that is similiar to a given object but differs at a specific path
@@ -26,6 +26,12 @@ import { Path } from "./Path"
  * ```
  */
 function set<T>(path: Path, obj: T, value: any): T {
+  if (process && process.env && process.env.NODE_ENV === "development") {
+    if (!isPath(path)) {
+      throw new TypeError(`${path} is not a valid path`)
+    }
+  }
+
   const pathArr: Path = new Array<any>().concat(path)
   if (pathArr.length === 0) {
     return value

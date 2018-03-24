@@ -1,3 +1,2 @@
-* check path in dev-mode and warn if number-like string (e. g. "0") is used
 * make the result of get configurable, if falsy value found on the way
 * make autovivication in set and upate configurable
