@@ -6,8 +6,8 @@
   "scripts": {
     "build": "tsc",
     "test": "ava 'lib/test/**/*.js'",
-    "prepublish": "npm run build && npm run test && npm run doc && cp lib/src/* .",
-    "postpublish": "git clean -f",
+    "prepublish": "npm run build && npm run test && cp lib/src/* .",
+    "postpublish": "rm -f ./*.{js,js.map,d.ts}",
     "doc": "typedoc --out docs/api --mode file --excludePrivate src"
   },
   "pre-commit": [
