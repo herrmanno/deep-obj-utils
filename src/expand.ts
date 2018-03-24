@@ -27,7 +27,7 @@ import { Path } from "./Path"
  * ```
  */
 function expand(pattern: Pattern, object: object | any[]): Path[] {
-  const patternArr: Pattern = new Array<Segment>().concat(pattern)
+  const patternArr: Pattern = new Array<PatternSegment>().concat(pattern)
   const [segment, nextSegment] = patternArr
 
   // primitive type does return no mathing paths
