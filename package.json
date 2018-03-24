@@ -1,6 +1,6 @@
 {
   "name": "deep-obj-utils",
-  "version": "1.0.0-rc.4",
+  "version": "1.0.0-rc.5",
   "description": "Utilities to handle immutable objects without pain",
   "main": "index.js",
   "scripts": {
