@@ -101,7 +101,7 @@
 					<div class="tsd-signature tsd-kind-icon">Path<span class="tsd-signature-symbol">:</span> <a href="globals.html#pathsegment" class="tsd-signature-type">PathSegment</a><span class="tsd-signature-symbol"> | </span><a href="globals.html#pathsegment" class="tsd-signature-type">PathSegment</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in Path.ts:11</li>
+							<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/e6ae504/src/Path.ts#L11">Path.ts:11</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -116,7 +116,7 @@
 					<div class="tsd-signature tsd-kind-icon">Path<wbr>Segment<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in Path.ts:6</li>
+							<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/e6ae504/src/Path.ts#L6">Path.ts:6</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -131,7 +131,7 @@
 					<div class="tsd-signature tsd-kind-icon">Pattern<span class="tsd-signature-symbol">:</span> <a href="globals.html#patternsegment" class="tsd-signature-type">PatternSegment</a><span class="tsd-signature-symbol"> | </span><a href="globals.html#patternsegment" class="tsd-signature-type">PatternSegment</a><span class="tsd-signature-symbol">[]</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in Pattern.ts:9</li>
+							<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/e6ae504/src/Pattern.ts#L9">Pattern.ts:9</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -146,7 +146,7 @@
 					<div class="tsd-signature tsd-kind-icon">Pattern<wbr>Segment<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">RegExp</span></div>
 					<aside class="tsd-sources">
 						<ul>
-							<li>Defined in Pattern.ts:4</li>
+							<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/e6ae504/src/Pattern.ts#L4">Pattern.ts:4</a></li>
 						</ul>
 					</aside>
 					<div class="tsd-comment tsd-typography">
@@ -162,13 +162,13 @@
 					<a name="expand" class="tsd-anchor"></a>
 					<h3>expand</h3>
 					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">expand<span class="tsd-signature-symbol">(</span>pattern<span class="tsd-signature-symbol">: </span><a href="globals.html#pattern" class="tsd-signature-type">Pattern</a>, object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="globals.html#path" class="tsd-signature-type">Path</a><span class="tsd-signature-symbol">[]</span></li>
+						<li class="tsd-signature tsd-kind-icon">expand<span class="tsd-signature-symbol">(</span>pattern<span class="tsd-signature-symbol">: </span><a href="globals.html#pattern" class="tsd-signature-type">Pattern</a>, object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="globals.html#path" class="tsd-signature-type">Path</a><span class="tsd-signature-symbol">[]</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in expand.ts:29</li>
+									<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/e6ae504/src/expand.ts#L29">expand.ts:29</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -177,7 +177,7 @@
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
-									<dd><pre><code class="lang-javascript"><span class="hljs-keyword">const</span> o = {
+									<dd><pre><code class="language-javascript"><span class="hljs-keyword">const</span> o = {
   <span class="hljs-attr">foo</span>: {
     <span class="hljs-attr">bar</span>: <span class="hljs-string">"bar"</span>,
     <span class="hljs-attr">baz</span>: <span class="hljs-string">"baz"</span>,
@@ -192,8 +192,7 @@
 <span class="hljs-keyword">let</span> result = expand([<span class="hljs-string">"*"</span>, <span class="hljs-string">"*"</span>], o)
 <span class="hljs-comment">// result === [ ["foo", "bar"], ["foo", "baz"], ["foo2", 0], ["foo2", 1] ]</span>
 <span class="hljs-keyword">let</span> result = expand([<span class="hljs-string">"foo"</span>, <span class="hljs-string">"*"</span>], o)
-<span class="hljs-comment">// result ===  [ ["foo", "bar"], ["foo", "baz"] ]</span>
-</code></pre>
+<span class="hljs-comment">// result ===  [ ["foo", "bar"], ["foo", "baz"] ]</span></code></pre>
 									</dd>
 								</dl>
 							</div>
@@ -206,7 +205,7 @@
 									</div>
 								</li>
 								<li>
-									<h5>object: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>object: <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>the object to expand onto</p>
 									</div>
@@ -226,7 +225,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in get.ts:15</li>
+									<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/e6ae504/src/get.ts#L15">get.ts:15</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -235,10 +234,9 @@
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
-									<dd><pre><code class="lang-javascript"><span class="hljs-keyword">const</span> object = { <span class="hljs-attr">foo</span>: [<span class="hljs-literal">null</span>, { <span class="hljs-attr">bar</span>: <span class="hljs-string">"BAR"</span> }] }
-<span class="hljs-keyword">const</span> result = get([<span class="hljs-string">"foo"</span>, <span class="hljs-number">1</span>, <span class="hljs-string">"bar"</span>], object)
-<span class="hljs-comment">// result === "BAR"</span>
-</code></pre>
+									<dd><pre><code class="language-javascript"><span class="hljs-keyword">const</span> object = { <span class="hljs-attr">foo</span>: [<span class="hljs-literal">null</span>, { <span class="hljs-attr">bar</span>: <span class="hljs-string">"BAR"</span> }] }
+<span class="hljs-keyword">const</span> result = <span class="hljs-keyword">get</span>(["foo", 1, "bar"], object)
+// result === "BAR"</code></pre>
 									</dd>
 								</dl>
 							</div>
@@ -277,7 +275,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in Path.ts:36</li>
+									<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/e6ae504/src/Path.ts#L36">Path.ts:36</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -309,7 +307,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in Path.ts:18</li>
+									<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/e6ae504/src/Path.ts#L18">Path.ts:18</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -341,7 +339,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in Pattern.ts:16</li>
+									<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/e6ae504/src/Pattern.ts#L16">Pattern.ts:16</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -373,7 +371,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in set.ts:28</li>
+									<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/e6ae504/src/set.ts#L28">set.ts:28</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -382,21 +380,20 @@
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
-									<dd><pre><code class="lang-javascript"><span class="hljs-keyword">const</span> object = { <span class="hljs-attr">foo</span>: [<span class="hljs-literal">null</span>, { <span class="hljs-attr">bar</span>: <span class="hljs-string">"BAR"</span> }] }
+									<dd><pre><code class="language-javascript"><span class="hljs-keyword">const</span> object = { <span class="hljs-attr">foo</span>: [<span class="hljs-literal">null</span>, { <span class="hljs-attr">bar</span>: <span class="hljs-string">"BAR"</span> }] }
 
-<span class="hljs-keyword">let</span> result = set([<span class="hljs-string">"foo"</span>, <span class="hljs-number">0</span>, <span class="hljs-string">"baz"</span>], object, <span class="hljs-string">"baz"</span>)
-<span class="hljs-comment">// result === { foo: ["baz", { bar: "BAR" }] }</span>
+<span class="hljs-keyword">let</span> result = <span class="hljs-keyword">set</span>(["foo", 0, "baz"], object, "baz")
+// result === { foo: [<span class="hljs-string">"baz"</span>, { <span class="hljs-attr">bar</span>: <span class="hljs-string">"BAR"</span> }] }
 <span class="hljs-comment">// object === { foo: [null, { bar: "BAR" }] } !</span>
 
 <span class="hljs-comment">// with autovivication</span>
 <span class="hljs-keyword">const</span> object = {}
 
-<span class="hljs-keyword">let</span> result = set([<span class="hljs-string">"foo"</span>, <span class="hljs-number">0</span>, <span class="hljs-string">"baz"</span>], object, <span class="hljs-string">"baz"</span>)
-<span class="hljs-comment">// result === { foo: ["baz", { bar: "BAR" }] }</span>
+<span class="hljs-keyword">let</span> result = <span class="hljs-keyword">set</span>(["foo", 0, "baz"], object, "baz")
+// result === { foo: [<span class="hljs-string">"baz"</span>, { <span class="hljs-attr">bar</span>: <span class="hljs-string">"BAR"</span> }] }
 <span class="hljs-comment">// *missing* segments will be created on the fly</span>
 <span class="hljs-comment">// if `typeof segment === "string"`  an empty object will be created at the non-existing path</span>
-<span class="hljs-comment">// if `typeof segment === "number"`  an empty array will be created at the non-existing path</span>
-</code></pre>
+<span class="hljs-comment">// if `typeof segment === "number"`  an empty array will be created at the non-existing path</span></code></pre>
 									</dd>
 								</dl>
 							</div>
@@ -441,7 +438,7 @@
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in update.ts:29</li>
+									<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/e6ae504/src/update.ts#L29">update.ts:29</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -450,7 +447,7 @@
 								</div>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
-									<dd><pre><code class="lang-javascript"><span class="hljs-keyword">const</span> object = { <span class="hljs-attr">foo</span>: [<span class="hljs-literal">null</span>, { <span class="hljs-attr">bar</span>: <span class="hljs-string">"bar"</span> }] }
+									<dd><pre><code class="language-javascript"><span class="hljs-keyword">const</span> object = { <span class="hljs-attr">foo</span>: [<span class="hljs-literal">null</span>, { <span class="hljs-attr">bar</span>: <span class="hljs-string">"bar"</span> }] }
 
 <span class="hljs-keyword">let</span> result = update([<span class="hljs-string">"foo"</span>, <span class="hljs-number">1</span>, <span class="hljs-string">"bar"</span>], v =&gt; v.toUpperCase())
 <span class="hljs-comment">// result === { foo: [null, { bar: "BAR" }] }</span>
@@ -458,12 +455,11 @@
 <span class="hljs-comment">// with autovivication</span>
 <span class="hljs-keyword">const</span> object = {}
 
-<span class="hljs-keyword">let</span> result = set([<span class="hljs-string">"foo"</span>, <span class="hljs-number">1</span>, <span class="hljs-string">"bar"</span>], object, v =&gt; v.toUpperCase())
-<span class="hljs-comment">// result === { foo: [null, { bar: "BAR" }] }</span>
+<span class="hljs-keyword">let</span> result = <span class="hljs-keyword">set</span>(["foo", 1, "bar"], object, v =&gt; v.toUpperCase())
+// result === { foo: [<span class="hljs-literal">null</span>, { <span class="hljs-attr">bar</span>: <span class="hljs-string">"BAR"</span> }] }
 <span class="hljs-comment">// *missing* segments will be created on the fly</span>
 <span class="hljs-comment">// if `typeof segment === "string"`  an empty object will be created at the non-existing path</span>
-<span class="hljs-comment">// if `typeof segment === "number"`  an empty array will be created at the non-existing path</span>
-</code></pre>
+<span class="hljs-comment">// if `typeof segment === "number"`  an empty array will be created at the non-existing path</span></code></pre>
 									</dd>
 								</dl>
 							</div>
@@ -520,13 +516,13 @@
 					<a name="values" class="tsd-anchor"></a>
 					<h3>values</h3>
 					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">values<span class="tsd-signature-symbol">(</span>object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">values<span class="tsd-signature-symbol">(</span>object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in values.ts:19</li>
+									<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/e6ae504/src/values.ts#L19">values.ts:19</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -536,17 +532,16 @@
 								<p>The order of the returned values is not guarenteed to be sorted in any way</p>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
-									<dd><pre><code class="lang-javascript"><span class="hljs-keyword">const</span> object = { <span class="hljs-attr">foo</span>: { <span class="hljs-attr">bar</span>: <span class="hljs-string">"bar"</span>, <span class="hljs-attr">baz</span>: [<span class="hljs-literal">true</span>, <span class="hljs-number">0</span>] }}
+									<dd><pre><code class="language-javascript"><span class="hljs-keyword">const</span> object = { <span class="hljs-attr">foo</span>: { <span class="hljs-attr">bar</span>: <span class="hljs-string">"bar"</span>, <span class="hljs-attr">baz</span>: [<span class="hljs-literal">true</span>, <span class="hljs-number">0</span>] }}
 <span class="hljs-keyword">const</span> result = values(object)
-<span class="hljs-comment">// result === [ "bar", true, 0 ]</span>
-</code></pre>
+<span class="hljs-comment">// result === [ "bar", true, 0 ]</span></code></pre>
 									</dd>
 								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>object: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>object: <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>the object to retrieve all primitives values from</p>
 									</div>
@@ -561,13 +556,13 @@
 					<a name="valuesandpaths" class="tsd-anchor"></a>
 					<h3>values<wbr>And<wbr>Paths</h3>
 					<ul class="tsd-signatures tsd-kind-function">
-						<li class="tsd-signature tsd-kind-icon">values<wbr>And<wbr>Paths<span class="tsd-signature-symbol">(</span>object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></li>
+						<li class="tsd-signature tsd-kind-icon">values<wbr>And<wbr>Paths<span class="tsd-signature-symbol">(</span>object<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Array</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">object</span><span class="tsd-signature-symbol">&gt;</span></li>
 					</ul>
 					<ul class="tsd-descriptions">
 						<li class="tsd-description">
 							<aside class="tsd-sources">
 								<ul>
-									<li>Defined in valuesAndPaths.ts:22</li>
+									<li>Defined in <a href="https://github.com/herrmanno/deep-obj-utils/blob/e6ae504/src/valuesAndPaths.ts#L22">valuesAndPaths.ts:22</a></li>
 								</ul>
 							</aside>
 							<div class="tsd-comment tsd-typography">
@@ -577,21 +572,20 @@
 								<p>The order of the returned values is not guarenteed to be sorted in any way</p>
 								<dl class="tsd-comment-tags">
 									<dt>example</dt>
-									<dd><pre><code class="lang-javascript"><span class="hljs-keyword">const</span> object = { <span class="hljs-attr">foo</span>: { <span class="hljs-attr">bar</span>: <span class="hljs-string">"bar"</span>, <span class="hljs-attr">baz</span>: [<span class="hljs-literal">true</span>, <span class="hljs-number">0</span>] }}
+									<dd><pre><code class="language-javascript"><span class="hljs-keyword">const</span> object = { <span class="hljs-attr">foo</span>: { <span class="hljs-attr">bar</span>: <span class="hljs-string">"bar"</span>, <span class="hljs-attr">baz</span>: [<span class="hljs-literal">true</span>, <span class="hljs-number">0</span>] }}
 <span class="hljs-keyword">const</span> result = values(object)
 <span class="hljs-comment">// result === [</span>
   { <span class="hljs-attr">path</span>: [ <span class="hljs-string">"foo"</span>, <span class="hljs-string">"bar"</span>, ], <span class="hljs-attr">value</span>: <span class="hljs-string">"bar"</span> },
   { <span class="hljs-attr">path</span>: [ <span class="hljs-string">"foo"</span>, <span class="hljs-string">"baz"</span>, <span class="hljs-number">0</span> ], <span class="hljs-attr">value</span>: <span class="hljs-literal">true</span> },
   { <span class="hljs-attr">path</span>: [ <span class="hljs-string">"foo"</span>, <span class="hljs-string">"baz"</span>, <span class="hljs-number">1</span> ], <span class="hljs-attr">value</span>: <span class="hljs-number">0</span> }
-]
-</code></pre>
+]</code></pre>
 									</dd>
 								</dl>
 							</div>
 							<h4 class="tsd-parameters-title">Parameters</h4>
 							<ul class="tsd-parameters">
 								<li>
-									<h5>object: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+									<h5>object: <span class="tsd-signature-type">object</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
 									<div class="tsd-comment tsd-typography">
 										<p>the object to retrieve all primitives values from</p>
 									</div>

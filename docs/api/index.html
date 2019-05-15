@@ -65,13 +65,34 @@
 		<div class="col-8 col-content">
 			<div class="tsd-panel tsd-typography">
 				<h1 id="deep-obj-utils">deep-obj-utils</h1>
-				<p>TODO: Badges</p>
-				<p>TODO: Description</p>
+				<p>deep-obj-utils is an utility library for modifieng (e. g. cloning) immutable objects while changing nested properties.</p>
 				<h2 id="installation">Installation</h2>
-				<pre><code class="lang-shell">npm i deep-obj-utils
-</code></pre>
-				<h2 id="design-goals-principles">Design goals &amp; principles</h2>
-				<p>TODO: Description of what the library is for and when (not) to use it.</p>
+				<pre><code class="language-shell">npm i deep-obj-utils</code></pre>
+				<h2 id="examples">Examples</h2>
+				<pre><code class="language-javascript"><span class="hljs-keyword">import</span> { <span class="hljs-keyword">get</span>, <span class="hljs-keyword">set</span>, update } from "deep-obj-utils"
+
+// retrieving nested values
+
+const object = { foo: { <span class="hljs-attr">bar</span>: <span class="hljs-string">"baz"</span> } }
+<span class="hljs-keyword">get</span>(["foo", "bar"], object) // "baz"
+
+const object = [[null, "baz"]]
+<span class="hljs-keyword">get</span>([0, 1], object) // "baz"
+
+
+// creating objects with changed nested properties
+
+const object = { foo: { <span class="hljs-attr">bar</span>: <span class="hljs-string">"bar"</span> } }
+<span class="hljs-keyword">set</span>(["foo", "bar"], object, "baz") // { foo: { <span class="hljs-attr">bar</span>: <span class="hljs-string">"baz"</span> } }
+
+<span class="hljs-keyword">const</span> object = { <span class="hljs-attr">foo</span>: { <span class="hljs-attr">bar</span>: <span class="hljs-string">"bar"</span> } }
+update([<span class="hljs-string">"foo"</span>, <span class="hljs-string">"bar"</span>], object, v =&gt; v.toUpperCase()) <span class="hljs-comment">// { foo: { bar: "BAR" } }</span>
+
+
+<span class="hljs-comment">// auto vivication</span>
+
+<span class="hljs-keyword">const</span> object = {}
+<span class="hljs-keyword">set</span>(["foo", 0, "baz"], object, "baz") // { foo: [<span class="hljs-string">"baz"</span>, { <span class="hljs-attr">bar</span>: <span class="hljs-string">"BAR"</span> }] }</code></pre>
 				<h2 id="api">Api</h2>
 				<p>The documentation can be found at <a href="https://herrmanno.github.io/deep-obj-utils/api/">herrmanno.github.io/deep-obj-utils/api/</a>.</p>
 				<p>This project is licensed under the <a href="LICENSE">ISC license</a>.</p>
